@@ -2,6 +2,12 @@
 
 ### Commits
 
+1. Run the following command:
+
+```
+		
+```
+
 ### References
 
 * [CoE 134 Misyon remarks](https://docs.google.com/document/d/1dJt55uQ8PeBNDJ-a7OhjwOiIMxE2M1j_ZEa5pLaNYBo/edit)
