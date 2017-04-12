@@ -5,7 +5,7 @@
 
 * Create your own remote branch. Master branch initially contains the base Misyon files with Firebase integration. 
 
-Refer to the _home.html_ and _home.ts_ in the [coe134-sampleapp](https://gitlab.com/agustin.johnpatrick/coe134-sampleapp) as reference on how to access the database.
+Refer to the _home.html_ and _home.ts_ in the [coe134-sampleapp](https://gitlab.com/agustin.johnpatrick/coe134-sampleapp/tree/firebase) as reference on how to access the database.
 
 
 ### Notes
