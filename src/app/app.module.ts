@@ -6,10 +6,15 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { AngularFireModule } from 'angularfire2';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Network } from '@ionic-native/network';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Map } from '../pages/map/map';
+
+import { Locations } from '../providers/locations';
+import { GoogleMaps } from '../providers/google-maps';
+import { Connectivity } from '../providers/connectivity';
 
 // Firebase Configuration
 export const firebaseConfig = {
@@ -42,6 +47,10 @@ export const firebaseConfig = {
     StatusBar,
     SplashScreen,
     Geolocation,
+    Network,
+    Locations, 
+    GoogleMaps,
+    Connectivity,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

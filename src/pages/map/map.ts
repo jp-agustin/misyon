@@ -1,74 +1,44 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Geolocation } from '@ionic-native/geolocation';
-
-declare var google;
-
-@IonicPage()
+  import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Locations } from '../../providers/locations';
+import { GoogleMaps } from '../../providers/google-maps';
+import { NavController, Platform } from 'ionic-angular';
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+ 
 @Component({
   selector: 'page-map',
-  templateUrl: 'map.html',
+  templateUrl: 'map.html'
 })
 export class Map {
+ 
+    @ViewChild('map') mapElement: ElementRef;
+    @ViewChild('pleaseConnect') pleaseConnect: ElementRef;
 
-  @ViewChild('map') mapElement: ElementRef;
-  map: any;
+    missions: FirebaseListObservable<any>;
+ 
+    constructor(public navCtrl: NavController, public maps: GoogleMaps, public platform: Platform, public locations: Locations, af: AngularFire) {
+       this.missions = af.database.list('/Mission');
+    }
+ 
+    ionViewDidLoad(){
+ 
+        this.platform.ready().then(() => {
+ 
+            let mapLoaded = this.maps.init(this.mapElement.nativeElement, this.pleaseConnect.nativeElement);
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public geolocation: Geolocation) {
-
-  }
-
-  ionViewDidLoad(){
-    this.loadMap();
-  }
+            Promise.all([
+                mapLoaded
+            ]).then((result) => {
+                
+                this.missions.subscribe(snapshots => {
+                  snapshots.forEach(mission => {
+                    this.maps.addMarker(mission.XCoord, mission.YCoord);
+                  });
+                })
  
-  loadMap(){
+            });
  
-    this.geolocation.getCurrentPosition().then((position) => {
+        });
  
-      let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+    }
  
-      let mapOptions = {
-        center: latLng,
-        zoom: 15,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-      }
- 
-      this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
-
-      this.addMarker();
- 
-    }, (err) => {
-      console.log(err);
-    });
- 
-  }
-
-  addMarker(){
- 
-    let marker = new google.maps.Marker({
-      map: this.map,
-      animation: google.maps.Animation.DROP,
-      position: this.map.getCenter()
-    });
-   
-    let content = "<h4>Information!</h4>";          
-   
-    this.addInfoWindow(marker, content);
- 
-  }
-
-  addInfoWindow(marker, content){
- 
-    let infoWindow = new google.maps.InfoWindow({
-      content: content
-    });
-   
-    google.maps.event.addListener(marker, 'click', () => {
-      infoWindow.open(this.map, marker);
-    });
- 
-  }
-
-
 }
