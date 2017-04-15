@@ -100,6 +100,19 @@ export class GoogleMaps {
         }
         
         this.map = new google.maps.Map(this.mapElement, mapOptions);
+
+        let image = {
+          scaledSize: new google.maps.Size(30, 35),
+          url: 'https://www.shareicon.net/data/512x512/2016/08/04/806609_medical_512x512.png'
+        }
+
+        new google.maps.Marker({
+          map: this.map,
+          animation: google.maps.Animation.DROP,
+          position: latLng,
+          icon: image
+        });
+
         resolve(true);
  
       //  });
