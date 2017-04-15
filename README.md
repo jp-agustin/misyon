@@ -4,7 +4,7 @@
 
 1) Google maps can now be loaded. Current location of the user is also displayed using Geolocation plugin.
 
-    Run the following command to add dependencies:
+Run the following command to add dependencies:
 
 ```
     ionic plugin add cordova-plugin-geolocation
