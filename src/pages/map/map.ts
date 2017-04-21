@@ -1,4 +1,4 @@
-  import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { GoogleMaps } from '../../providers/google-maps';
 import { NavController, Platform } from 'ionic-angular';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
@@ -15,7 +15,7 @@ export class Map {
     missions: FirebaseListObservable<any>;
  
     constructor(public navCtrl: NavController, public maps: GoogleMaps, public platform: Platform, af: AngularFire) {
-       this.missions = af.database.list('/Mission');
+      this.missions = af.database.list('/Mission');
     }
  
     ionViewDidLoad(){

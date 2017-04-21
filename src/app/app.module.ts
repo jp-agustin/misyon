@@ -11,6 +11,7 @@ import { Network } from '@ionic-native/network';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Map } from '../pages/map/map';
+import { Current } from '../pages/current/current';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -29,7 +30,8 @@ export const firebaseConfig = {
   declarations: [
     MyApp,
     HomePage,
-    Map
+    Map,
+    Current
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ export const firebaseConfig = {
   entryComponents: [
     MyApp,
     HomePage,
-    Map
+    Map,
+    Current
   ],
   providers: [
     StatusBar,
