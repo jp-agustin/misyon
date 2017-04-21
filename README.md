@@ -18,6 +18,7 @@ Run the following command to add dependencies:
     npm install --save @ionic-native/network
 ```
 
+3) Current missions page for Head was added
 ---
 
 ### References
