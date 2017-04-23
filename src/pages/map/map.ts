@@ -30,7 +30,7 @@ export class Map {
                 
                 this.missions.subscribe(snapshots => {
                   snapshots.forEach(mission => {
-                    this.maps.addMarker(mission.XCoord, mission.YCoord, mission.Location, mission.Type);
+                    this.maps.addMarker(mission.XCoord, mission.YCoord, mission.Location, mission.Type, mission.Status);
                   });
                 })
  

@@ -171,7 +171,7 @@ export class GoogleMaps {
  
   }
  
-  addMarker(lat: number, lng: number, location, type): void {
+  addMarker(lat: number, lng: number, location, type, status): void {
 
     let latLng = new google.maps.LatLng(lat, lng);
  
@@ -188,6 +188,9 @@ export class GoogleMaps {
                   "</h6>"+
                   "<p>"+
                   type +
+                  "</p>"+
+                  "<p>"+
+                  status +
                   "</p>"+
                   "<form id='button'>"+
                   "<div>"+
