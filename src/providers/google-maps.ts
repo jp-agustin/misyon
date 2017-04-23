@@ -3,6 +3,7 @@ import { Connectivity } from './connectivity';
 import { Geolocation } from '@ionic-native/geolocation';
  
 declare var google;
+var infoWindow;
  
 @Injectable()
 export class GoogleMaps {
@@ -170,8 +171,8 @@ export class GoogleMaps {
  
   }
  
-  addMarker(lat: number, lng: number): void {
- 
+  addMarker(lat: number, lng: number, location, type): void {
+
     let latLng = new google.maps.LatLng(lat, lng);
  
     let marker = new google.maps.Marker({
@@ -179,7 +180,31 @@ export class GoogleMaps {
       animation: google.maps.Animation.DROP,
       position: latLng
     });
- 
+
+    infoWindow = new google.maps.InfoWindow();
+    var content = "<div id='tabs'>"+
+                  "<h6>"+
+                  location +
+                  "</h6>"+
+                  "<p>"+
+                  type +
+                  "</p>"+
+                  "<form id='button'>"+
+                  "<div>"+
+                  "<button type='button'>"+
+                  "Details"+
+                  "</button>"
+                  "</div>"+
+                  "</form>"+
+                  "</div>";  
+
+    google.maps.event.addListener(marker,'click', (function(marker,location,infowindow){ 
+        return function() {
+            infoWindow.setContent(content);
+            infoWindow.open(this.map,marker);
+        };
+    })(marker,location,infoWindow));
+
     this.markers.push(marker);  
  
   }

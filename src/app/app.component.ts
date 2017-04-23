@@ -11,7 +11,7 @@ import { Current } from '../pages/current/current';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = Current;
+  rootPage:any = Map;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
