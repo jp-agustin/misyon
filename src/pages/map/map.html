@@ -10,6 +10,23 @@
     <p>Please connect to the Internet...</p>
   </div>
  
+  <ion-item>
+    <ion-label>Filter</ion-label>
+    <ion-select [(ngModel)]="type" (ionChange)="filterMarkers();">
+      <ion-option value="all" ng-selected="selected">All Types</ion-option>
+      <ion-option value="general">General</ion-option>
+      <ion-option value="dental">Dental</ion-option>
+      <ion-option value="surgical">Surgical</ion-option>
+      <ion-option value="emergency">Emergency Relief</ion-option>
+    </ion-select>
+    <ion-select [(ngModel)]="status" (ionChange)="filterMarkers();">
+      <ion-option value="all" ng-selected="selected">All Status</ion-option>
+      <ion-option value="past">Past</ion-option>
+      <ion-option value="ongoing">On-going</ion-option>
+      <ion-option value="upcoming">Upcoming</ion-option>
+    </ion-select>
+  </ion-item>
+
   <div #map id="map"></div>
  
 </ion-content>

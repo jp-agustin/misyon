@@ -13,6 +13,8 @@ export class Map {
     @ViewChild('pleaseConnect') pleaseConnect: ElementRef;
 
     missions: FirebaseListObservable<any>;
+    type: string = "all";
+    status: string = "all";
  
     constructor(public navCtrl: NavController, public maps: GoogleMaps, public platform: Platform, af: AngularFire) {
       this.missions = af.database.list('/Mission');
@@ -38,6 +40,12 @@ export class Map {
  
         });
  
+    }
+
+    filterMarkers(){
+
+      this.maps.filterMarkers(this.type, this.status);
+
     }
  
 }

@@ -173,12 +173,40 @@ export class GoogleMaps {
  
   addMarker(lat: number, lng: number, location, type, status): void {
 
+    var Type;
+    switch(type) {
+      case "General": 
+        Type = "general";
+        break;
+      case "Dental":
+        Type = "dental";
+        break;
+      case "Surgical":
+        Type = "surgical";
+        break;
+      case "Emergency Relief":
+        Type = "emergency"
+    }
+
+    var Status;
+    switch(status) {
+      case "Past": 
+        Status = "past";
+        break;
+      case "On-going":
+        Status = "ongoing";
+        break;
+      case "Upcoming":
+        Status = "upcoming";
+    }
+
     let latLng = new google.maps.LatLng(lat, lng);
  
     let marker = new google.maps.Marker({
       map: this.map,
       animation: google.maps.Animation.DROP,
-      position: latLng
+      position: latLng,
+      category: [Status, Type]
     });
 
     infoWindow = new google.maps.InfoWindow();
@@ -210,6 +238,43 @@ export class GoogleMaps {
 
     this.markers.push(marker);  
  
+  }
+
+  filterMarkers(type, status): void {
+
+    var i;
+    for (i = 0; i < this.markers.length; i++) {
+      let marker = this.markers[i];
+
+      if(type != "all" && status == "all") {
+        if(typeof marker.category == 'object' && marker.category.indexOf(type) >= 0) {
+            marker.setVisible(true);
+        }
+        else {          
+            marker.setVisible(false);
+        }
+      }
+      else if(type == "all" && status != "all") {
+        if(typeof marker.category == 'object' && marker.category.indexOf(status) >= 0) {
+            marker.setVisible(true);
+        }
+        else {          
+            marker.setVisible(false);
+        }
+      }
+      else if(type != "all" && status != "all") {
+        if(typeof marker.category == 'object' && marker.category.indexOf(type) >= 0 && marker.category.indexOf(status) >= 0) {
+            marker.setVisible(true);
+        }
+        else {          
+            marker.setVisible(false);
+        }
+      }
+      else {
+        marker.setVisible(true);
+      }
+    }  
+
   }
  
 }
