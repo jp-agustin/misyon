@@ -43,9 +43,7 @@ export class Map {
     }
 
     filterMarkers(){
-
       this.maps.filterMarkers(this.type, this.status);
-
     }
  
 }

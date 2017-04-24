@@ -96,7 +96,7 @@ export class GoogleMaps {
  
         let mapOptions = {
           center: latLng,
-          zoom: 15,
+          zoom: 10,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
         
@@ -260,6 +260,7 @@ export class GoogleMaps {
         }
         else {          
             marker.setVisible(false);
+
         }
       }
       else if(type != "all" && status != "all") {
