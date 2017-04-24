@@ -20,6 +20,8 @@ Run the following command to add dependencies:
 
 3) Current missions page for Head was added
 
+4) Basic info window (for markers) added + filtering markers function now working
+
 ---
 
 ### References
