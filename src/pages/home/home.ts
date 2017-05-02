@@ -4,7 +4,7 @@ import { MenuController } from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 import { Current } from '../current/current';
-import { Map } from '../map/map';
+import { Tabs } from '../tabs/tabs';
 
 @Component({
   selector: 'page-home',
@@ -23,7 +23,7 @@ export class HomePage {
 
   goToAdmin() {
     this.activeMenu = 'AdminMenu';
-    this.nav.setRoot(Map);
+    this.nav.setRoot(Tabs);
     this.menuCtrl.enable(true, 'adminMenu');
     this.menuCtrl.enable(false, 'gheadMenu');
     this.menuCtrl.enable(false, 'volunMenu');

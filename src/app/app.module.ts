@@ -15,6 +15,9 @@ import { Current } from '../pages/current/current';
 import { LoginPage } from '../pages/login/login';
 import { MissionList } from '../pages/mission-list/mission-list';
 import { Missiondetails } from '../pages/missiondetails/missiondetails';
+import { Tabs } from '../pages/tabs/tabs';
+import { ChartMission } from '../pages/chart-mission/chart-mission';
+import { ChartPerson } from '../pages/chart-person/chart-person';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -37,7 +40,10 @@ export const firebaseConfig = {
     Current,
     LoginPage,
     Missiondetails,
-    MissionList
+    MissionList,
+    Tabs,
+    ChartPerson,
+    ChartMission
   ],
   imports: [
     BrowserModule,
@@ -52,7 +58,10 @@ export const firebaseConfig = {
     Current,
     LoginPage,
     Missiondetails,
-    MissionList
+    MissionList,
+    Tabs,
+    ChartPerson,
+    ChartMission
   ],
   providers: [
     StatusBar,
