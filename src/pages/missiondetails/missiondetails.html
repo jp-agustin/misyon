@@ -18,7 +18,11 @@
       <h2 align='center' style="color: #90a4ae"> {{mission.Type}} | {{mission.Status}} </h2>
       <br/>
       
+      <!-- <ion-avatar>
+      <img src="assets/avatar/{{head.Image}}"/>
+      </ion-avatar> -->
       <button ion-item *ngFor="let head of heads | async"> Head: {{head.FirstName}} {{head.LastName}}</button>
+
       <ion-list-header> Description </ion-list-header>
         <ion-card-content>
           <p> {{mission.Description}} </p>

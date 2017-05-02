@@ -13,6 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { Map } from '../pages/map/map';
 import { Current } from '../pages/current/current';
 import { LoginPage } from '../pages/login/login';
+import { MissionList } from '../pages/mission-list/mission-list';
 import { Missiondetails } from '../pages/missiondetails/missiondetails';
 
 import { GoogleMaps } from '../providers/google-maps';
@@ -35,7 +36,8 @@ export const firebaseConfig = {
     Map,
     Current,
     LoginPage,
-    Missiondetails
+    Missiondetails,
+    MissionList
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ export const firebaseConfig = {
     Map,
     Current,
     LoginPage,
-    Missiondetails
+    Missiondetails,
+    MissionList
   ],
   providers: [
     StatusBar,

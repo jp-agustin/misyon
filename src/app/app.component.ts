@@ -7,6 +7,7 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { Current } from '../pages/current/current';
 import { Map } from '../pages/map/map';
+import { MissionList } from '../pages/mission-list/mission-list';
 
 @Component({
   selector: 'side-menu',
@@ -30,8 +31,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Admin', component: HomePage },
       { title: 'On-going', component: HomePage },
-      { title: 'Map', component: HomePage },
-      { title: 'List', component: HomePage },
+      { title: 'Map', component: Map },
+      { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage }
     ];
 
@@ -39,7 +40,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Group Head', component: Current },
       { title: 'Map', component: Map },
-      { title: 'List', component: HomePage },
+      { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage },
       { title: 'Profile', component: HomePage }
     ];
@@ -47,8 +48,8 @@ export class MyApp {
     this.volunPages = [
       { title: 'Home', component: HomePage },
       { title: 'Volunteer', component: HomePage },
-      { title: 'Map', component: HomePage },
-      { title: 'List', component: HomePage },
+      { title: 'Map', component: Map },
+      { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage },
       { title: 'Profile', component: HomePage }
     ]; 

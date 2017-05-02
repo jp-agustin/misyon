@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Mission list
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list color="light">
+    <button ion-item *ngFor="let mission of missions | async" (click)="goToMissionList(mission.MissionId)">
+    <ion-icon name="ios-medkit-outline" item-left></ion-icon>
+    <!-- <h1>Med mission #{{mission.MissionId}}</h1> -->
+    <h2>{{mission.Location}}</h2>
+    <p>{{mission.Type}} | {{mission.Status}}</p>
+    </button>  
+  </ion-list>
+</ion-content>
