@@ -12,6 +12,8 @@ import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { Map } from '../pages/map/map';
 import { Current } from '../pages/current/current';
+import { LoginPage } from '../pages/login/login';
+import { Missiondetails } from '../pages/missiondetails/missiondetails';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -31,7 +33,9 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     Map,
-    Current
+    Current,
+    LoginPage,
+    Missiondetails
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,9 @@ export const firebaseConfig = {
     MyApp,
     HomePage,
     Map,
-    Current
+    Current,
+    LoginPage,
+    Missiondetails
   ],
   providers: [
     StatusBar,

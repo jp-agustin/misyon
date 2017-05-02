@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-title>
+      Mission Detail
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let mission of missions | async" >
+  <img src="assets/missions/{{mission.Image}}"/>  
+    <ion-card-content>
+      <h1 align='center'> {{mission.Location}}  </h1>
+      <hr/>
+      <br/> 
+      <h2 align='center'> Start: {{mission.StartDate}} - End: {{mission.EndDate}}</h2>
+      <h2 align='center' style="color: #90a4ae"> {{mission.Type}} | {{mission.Status}} </h2>
+      <br/>
+      
+      <button ion-item *ngFor="let head of heads | async"> Head: {{head.FirstName}} {{head.LastName}}</button>
+      <ion-list-header> Description </ion-list-header>
+        <ion-card-content>
+          <p> {{mission.Description}} </p>
+        </ion-card-content>
+
+      <ion-list-header> Location </ion-list-header>
+        insert map here
+
+      <button ion-button style="background-color: #90a4ae" block>  View Members  </button>
+
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

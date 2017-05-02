@@ -89,8 +89,7 @@ export class GoogleMaps {
  
       //this.geolocation.getCurrentPosition().then((position) => {
  
-        // UNCOMMENT FOR NORMAL USE
-        //let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+         //let latLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
  
         let latLng = new google.maps.LatLng(14.6546, 121.0647);
  
@@ -102,17 +101,17 @@ export class GoogleMaps {
         
         this.map = new google.maps.Map(this.mapElement, mapOptions);
 
-        let image = {
-          scaledSize: new google.maps.Size(30, 35),
-          url: 'https://www.shareicon.net/data/512x512/2016/08/04/806609_medical_512x512.png'
-        }
+        // let image = {
+        //   scaledSize: new google.maps.Size(30, 35),
+        //   url: 'https://www.shareicon.net/data/512x512/2016/08/04/806609_medical_512x512.png'
+        // }
 
-        new google.maps.Marker({
-          map: this.map,
-          animation: google.maps.Animation.DROP,
-          position: latLng,
-          icon: image
-        });
+        // new google.maps.Marker({
+        //   map: this.map,
+        //   animation: google.maps.Animation.DROP,
+        //   position: latLng,
+        //   icon: image
+        // });
 
         resolve(true);
  
@@ -171,7 +170,7 @@ export class GoogleMaps {
  
   }
  
-  addMarker(lat: number, lng: number, location, type, status): void {
+  addMarker(lat: number, lng: number, location, type, status) {
 
     var Type;
     switch(type) {
@@ -240,7 +239,7 @@ export class GoogleMaps {
  
   }
 
-  filterMarkers(type, status): void {
+  filterMarkers(type, status) {
 
     var i;
     for (i = 0; i < this.markers.length; i++) {

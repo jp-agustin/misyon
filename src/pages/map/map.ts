@@ -16,29 +16,30 @@ export class Map {
     type: string = "all";
     status: string = "all";
  
-    constructor(public navCtrl: NavController, public maps: GoogleMaps, public platform: Platform, af: AngularFire) {
-      this.missions = af.database.list('/Mission');
+    constructor(public navCtrl: NavController, public maps: GoogleMaps, public platform: Platform, public af: AngularFire) {
+      this.missions = this.af.database.list('/Mission');
+
     }
  
     ionViewDidLoad(){
- 
-        this.platform.ready().then(() => {
- 
-            let mapLoaded = this.maps.init(this.mapElement.nativeElement, this.pleaseConnect.nativeElement);
 
-            Promise.all([
-                mapLoaded
-            ]).then((result) => {
-                
-                this.missions.subscribe(snapshots => {
-                  snapshots.forEach(mission => {
-                    this.maps.addMarker(mission.XCoord, mission.YCoord, mission.Location, mission.Type, mission.Status);
-                  });
-                })
- 
-            });
+      this.platform.ready().then(() => {
+        
+        let mapLoaded = this.maps.init(this.mapElement.nativeElement, this.pleaseConnect.nativeElement);
+
+        Promise.all([ 
+            mapLoaded
+        ]).then((result) => {
+            console.log("enter result\n");
+            this.missions.subscribe(snapshots => {
+              snapshots.forEach(mission => {
+               this.maps.addMarker(mission.XCoord, mission.YCoord, mission.Location, mission.Type, mission.Status);
+              });
+            })
  
         });
+ 
+      });
  
     }
 

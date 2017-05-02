@@ -1,12 +1,28 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Ionic Blank</ion-title>
+  <ion-navbar color="navbarColor">
+      <ion-title>Role Selection</ion-title>
+      <!-- <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+      </button> -->
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div center>
+  <!-- <h4>Active Menu: <b color="primary">{{ (activeMenu == 'AdminMenu') ? 'Admin' : (activeMenu == 'GheadMenu') ? 'Group Head' : (activeMenu == 'VolunMenu') ? 'Volunteer' : 'None' }}</b></h4> -->
+    <ion-row responsive-sm>
+        <button ion-button class="button button-block button-light button-select" (click)="goToAdmin()" type="submit" block color="buttonColor">Admin</button>
+    </ion-row>
+    <ion-row responsive-sm>
+        <button ion-button class="button button-block button-light button-select" (click)="goToGrouphead()" type="submit" block color="buttonColor">Group Head</button>
+    </ion-row>
+    <ion-row responsive-sm>
+        <button ion-button class="button button-block button-light button-select" (click)="goToVolunteer()" type="submit" block color="buttonColor">Volunteer</button>
+    </ion-row>
+  <p></p>
+  <ion-row>
+      <button ion-button class="button button-block button-light button-select" (click)="goToLogin()" type="submit" block color="buttonColor">Back to Login</button>
+  </ion-row>
+  </div>
+
 </ion-content>

@@ -1,0 +1,31 @@
+
+<ion-header>
+</ion-header>
+
+<ion-content padding>
+	<div class="logo">
+		<img src="assets/img/appicon.png" alt="Ionic logo">
+	</div>
+
+	<form>
+		<ion-list padding padding-top>
+      <div class="login-form">
+      <ion-item padding-right class="login2">
+        <!-- <ion-label color="primary" stacked>Username</ion-label> -->
+        <ion-input type="text" placeholder="Username"></ion-input>
+      </ion-item>
+
+      <ion-item padding-right class="login2">
+        <!-- <ion-label color="primary" stacked>Password</ion-label> -->
+        <ion-input type="password" placeholder="Password"></ion-input>
+      </ion-item>
+      <p></p>
+      </div>
+
+        <button ion-button class="button button-stable button-login" (click)="onLogin(loginForm)" type="submit" block>
+        Login
+        </button>
+    </ion-list>
+	</form>
+
+</ion-content>

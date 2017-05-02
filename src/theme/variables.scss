@@ -24,17 +24,28 @@ $font-path: "../assets/fonts";
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #387ef5,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222,
-  red: (
-    base:     #f44336,
-    contrast: #ffffff
-  )
+  primary:    #263238,//#387ef5,
+  secondary:  #7295a6,//#32db64,//cfd8dc
+  danger:     #c62828,//#f53d3d,
+  light:      #fafbfc,//#f4f4f4,
+  dark:       #1b1b1b,//#222
+  navbarColor: #37474f,
+  navbarColorSec: #546e7a,
+  buttonColor: #cfd8dc
 );
 
+$background-color: #eceff1;
+$list-background-color: #fafbfc;//fff
+$list-ios-activated-background-color: #cfd8dc;
+$list-md-activated-background-color: #cfd8dc;
+
+$checkbox-ios-background-color-on: #32db64;
+$checkbox-ios-icon-border-color-on: #fff;
+ 
+$checkbox-md-icon-background-color-on: #32db64;
+$checkbox-md-icon-background-color-off: #fff;
+$checkbox-md-icon-border-color-off: #cecece;
+$checkbox-md-icon-border-color-on: #32db64;
 
 // App iOS Variables
 // --------------------------------------------------
