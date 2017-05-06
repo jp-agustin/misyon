@@ -13,6 +13,7 @@ import { HomePage } from '../pages/home/home';
 import { Map } from '../pages/map/map';
 import { Current } from '../pages/current/current';
 import { LoginPage } from '../pages/login/login';
+import { Create } from '../pages/create/create';
 import { MissionList } from '../pages/mission-list/mission-list';
 import { Missiondetails } from '../pages/missiondetails/missiondetails';
 import { Tabs } from '../pages/tabs/tabs';
@@ -43,7 +44,8 @@ export const firebaseConfig = {
     MissionList,
     Tabs,
     ChartPerson,
-    ChartMission
+    ChartMission,
+    Create
   ],
   imports: [
     BrowserModule,
@@ -61,7 +63,8 @@ export const firebaseConfig = {
     MissionList,
     Tabs,
     ChartPerson,
-    ChartMission
+    ChartMission,
+    Create
   ],
   providers: [
     StatusBar,

@@ -9,6 +9,7 @@ import { Current } from '../pages/current/current';
 import { Map } from '../pages/map/map';
 import { Tabs } from '../pages/tabs/tabs';
 import { MissionList } from '../pages/mission-list/mission-list';
+import { Create } from '../pages/create/create';
 
 @Component({
   selector: 'side-menu',
@@ -32,6 +33,8 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Admin', component: Tabs },
       { title: 'On-going', component: HomePage },
+      { title: 'Create Mission', component: Create },
+      { title: 'Organizations', component: HomePage },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage }
@@ -40,6 +43,7 @@ export class MyApp {
     this.gheadPages = [
       { title: 'Home', component: HomePage },
       { title: 'Group Head', component: Current },
+      { title: 'Organizations', component: HomePage },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage },

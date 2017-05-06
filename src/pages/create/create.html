@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Create Mission</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form>
+    <ion-item>
+      <ion-label color="primary" stacked>Location</ion-label>
+      <ion-input type="text" [(ngModel)]="missionLocation" name="Location" placeholder="Location"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Head</ion-label>
+      <ion-select [(ngModel)]="missionHead" name="Head" placeholder="Head">
+        <ion-option *ngFor="let head of heads | async" value="{{head.FirstName}}">
+        {{head.FirstName}}, {{head.LastName}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="primary" stacked>Type</ion-label>
+      <ion-select [(ngModel)]="missionType" name="Type" placeholder="Type">
+        <ion-option value="General">General</ion-option>
+        <ion-option value="Dental">Dental</ion-option>
+        <ion-option value="Surgical">Surgical</ion-option>
+        <ion-option value="Emergency Relief">Emergency Relief</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Status</ion-label>
+      <ion-select [(ngModel)]="missionStatus" name="Status" placeholder="Status">
+        <ion-option value="Past">Past</ion-option>
+        <ion-option value="On-going">On-going</ion-option>
+        <ion-option value="Upcoming">Upcoming</ion-option>
+      </ion-select>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Start Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY" max="2018-12-31" [(ngModel)]="missionSdate" name="Sdate" placeholder="Start Date"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>End Date</ion-label>
+      <ion-datetime displayFormat="MMM DD, YYYY" max="2018-12-31" [(ngModel)]="missionEdate" name="Edate" placeholder="End date"></ion-datetime>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Description</ion-label>
+      <ion-textarea [(ngModel)]="missionDescription" name="description" placeholder="Description"></ion-textarea>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label color="primary" stacked>Members</ion-label>
+      <ion-select [(ngModel)]="missionMems" name="Member" placeholder="Member" multiple="true">
+        <ion-option *ngFor="let member of members | async" value="{{member.FirstName}}">
+        {{member.FirstName}}, {{member.LastName}}
+        </ion-option>
+      </ion-select>
+    </ion-item>
+
+    <button ion-button type="submit" block>Submit</button>
+  </form>
+</ion-content>
