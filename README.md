@@ -28,6 +28,8 @@ Run the following command to add dependencies:
 
 7) Edited UI
 
+8) Calendar view now working
+
 ---
 
 ### References
