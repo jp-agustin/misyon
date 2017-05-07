@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>On-going Missions</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let mission of missions | async">
+      <img src="assets/missions/{{mission.Image}}"/>
+      <ion-card-content>
+        <ion-card-title>
+          {{mission.Location}}
+        </ion-card-title>
+        <h2 style="color: #90a4ae">
+          {{mission.Type}} | {{mission.Status}}
+        </h2>
+      </ion-card-content>
+      <button ion-item (click)="missionDetails(mission.MissionId);">
+          <ion-icon md="ios-arrow-forward-outline" item-right></ion-icon>
+          Details
+      </button>
+    </ion-card>
+</ion-content>

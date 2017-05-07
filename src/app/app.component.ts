@@ -10,6 +10,9 @@ import { Map } from '../pages/map/map';
 import { Tabs } from '../pages/tabs/tabs';
 import { MissionList } from '../pages/mission-list/mission-list';
 import { Create } from '../pages/create/create';
+import { Ongoing } from '../pages/ongoing/ongoing';
+import { MemProfile } from '../pages/mem-profile/mem-profile';
+import { HeadProfile } from '../pages/head-profile/head-profile';
 
 @Component({
   selector: 'side-menu',
@@ -32,7 +35,7 @@ export class MyApp {
     this.adminPages = [
       { title: 'Home', component: HomePage },
       { title: 'Admin', component: Tabs },
-      { title: 'On-going', component: HomePage },
+      { title: 'On-going', component: Ongoing },
       { title: 'Create Mission', component: Create },
       { title: 'Organizations', component: HomePage },
       { title: 'Map', component: Map },
@@ -47,7 +50,7 @@ export class MyApp {
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage },
-      { title: 'Profile', component: HomePage }
+      { title: 'Profile', component: HeadProfile }
     ];
 
     this.volunPages = [
@@ -56,7 +59,7 @@ export class MyApp {
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
       { title: 'Calendar', component: HomePage },
-      { title: 'Profile', component: HomePage }
+      { title: 'Profile', component: MemProfile }
     ]; 
   }
 

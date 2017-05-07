@@ -13,12 +13,15 @@ import { HomePage } from '../pages/home/home';
 import { Map } from '../pages/map/map';
 import { Current } from '../pages/current/current';
 import { LoginPage } from '../pages/login/login';
+import { Ongoing } from '../pages/ongoing/ongoing';
 import { Create } from '../pages/create/create';
 import { MissionList } from '../pages/mission-list/mission-list';
 import { Missiondetails } from '../pages/missiondetails/missiondetails';
 import { Tabs } from '../pages/tabs/tabs';
 import { ChartMission } from '../pages/chart-mission/chart-mission';
 import { ChartPerson } from '../pages/chart-person/chart-person';
+import { MemProfile } from '../pages/mem-profile/mem-profile';
+import { HeadProfile } from '../pages/head-profile/head-profile';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -45,7 +48,10 @@ export const firebaseConfig = {
     Tabs,
     ChartPerson,
     ChartMission,
-    Create
+    Create,
+    Ongoing,
+    MemProfile,
+    HeadProfile
   ],
   imports: [
     BrowserModule,
@@ -64,7 +70,10 @@ export const firebaseConfig = {
     Tabs,
     ChartPerson,
     ChartMission,
-    Create
+    Create,
+    Ongoing,
+    MemProfile,
+    HeadProfile
   ],
   providers: [
     StatusBar,
