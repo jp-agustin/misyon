@@ -1,3 +1,20 @@
-.bg {
-  background-color: #f1f1f1;
+page-current {
+  
+  ion-card-content {
+
+      background-color: map-get($colors, navbarColor);
+      text-align: center;
+      
+      h1 {
+        font-size: 2.5rem;
+        margin-top: .5rem;
+        color: #FFFFFF;
+      }
+
+      h3 {
+        font-size: 1.8rem;
+      }
+
+    }
+
 }

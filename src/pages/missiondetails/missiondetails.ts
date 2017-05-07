@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { Profile } from '../profile/profile';
+import { MemberList } from '../member-list/member-list';
 
 @IonicPage()
 @Component({
@@ -43,8 +45,8 @@ export class Missiondetails {
       });
       this.heads = af.database.list('/Person', {
         query: {
-        orderByChild: 'MemberId',
-        equalTo: childKey
+          orderByChild: 'MemberId',
+          equalTo: childKey
         }
       });
     })
@@ -55,4 +57,12 @@ export class Missiondetails {
     
   }
 
+  profile(memberId) {
+    this.navCtrl.push(Profile, memberId);
+  }
+
+  goToMemberList(){
+    this.navCtrl.push(MemberList, this.membersId);
+    console.log("send memList: " + this.membersId);
+  }
 }

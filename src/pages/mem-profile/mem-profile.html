@@ -1,13 +1,48 @@
-
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>memProfile</ion-title>
+  <ion-navbar color="navbarColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Volunteer Profile</ion-title>
   </ion-navbar>
-
 </ion-header>
 
+<ion-content>
+  <div style="clear:both; height:100px"></div>
 
-<ion-content padding>
+  <ion-card *ngFor="let volunteer of volunteers | async">
 
+    <ion-card-content>
+      <img src="assets/avatar/{{volunteer.Image}}"/>
+      <h1 style="color: #FFFFFF">{{volunteer.FirstName}} {{volunteer.LastName}}</h1>
+      <h2 style="color: #FFFFFF">{{volunteer.Profession}}</h2>
+    </ion-card-content>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Contact Number:</p>
+        <h3>{{volunteer.ContactNum}}</h3>
+      </ion-item> 
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <p>Email Address:</p>
+        <h3>{{volunteer.ContactEmail}}</h3>
+      </ion-item>
+
+      <ion-item><h2 style="color: #EF5350"> In case of emergency, contact: </h2></ion-item>
+    
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <p>Contact Person:</p>
+        <h3>{{volunteer.EmerPerson}}</h3>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Emergency Contact Number:</p>
+        <h3>{{volunteer.EmerNum}}</h3>
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
 </ion-content>

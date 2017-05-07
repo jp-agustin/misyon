@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-title>List of Members</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item *ngFor="let member of members" (click)="goToProfile(member[0])">
+    <ion-avatar item-left><img src="assets/avatar/{{member[2]}}"/></ion-avatar>
+    <h2>{{member[1]}}</h2>
+    <p>{{member[3]}}</p>
+    </button>  
+  </ion-list>
+</ion-content>

@@ -4,18 +4,20 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 
 @IonicPage()
 @Component({
-  selector: 'page-mem-profile',
-  templateUrl: 'mem-profile.html',
+  selector: 'page-profile',
+  templateUrl: 'profile.html',
 })
-export class MemProfile {
+export class Profile {
 
-  volunteers: FirebaseListObservable<any>
+  memId: any;
+  members: FirebaseListObservable<any>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFire) {
-    this.volunteers = af.database.list('/Person', {
+    this.memId = this.navParams.data;
+    this.members = af.database.list('/Person', {
       query: {
         orderByChild: 'MemberId',
-        equalTo: 28
+        equalTo: this.memId
       }
     });
   }

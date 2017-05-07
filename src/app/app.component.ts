@@ -13,6 +13,7 @@ import { Create } from '../pages/create/create';
 import { Ongoing } from '../pages/ongoing/ongoing';
 import { MemProfile } from '../pages/mem-profile/mem-profile';
 import { HeadProfile } from '../pages/head-profile/head-profile';
+import { CalendarPage } from '../pages/calendar/calendar';
 
 @Component({
   selector: 'side-menu',
@@ -40,7 +41,7 @@ export class MyApp {
       { title: 'Organizations', component: HomePage },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
-      { title: 'Calendar', component: HomePage }
+      { title: 'Calendar', component: CalendarPage }
     ];
 
     this.gheadPages = [
@@ -49,7 +50,7 @@ export class MyApp {
       { title: 'Organizations', component: HomePage },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
-      { title: 'Calendar', component: HomePage },
+      { title: 'Calendar', component: CalendarPage },
       { title: 'Profile', component: HeadProfile }
     ];
 
@@ -58,7 +59,7 @@ export class MyApp {
       { title: 'Volunteer', component: HomePage },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
-      { title: 'Calendar', component: HomePage },
+      { title: 'Calendar', component: CalendarPage },
       { title: 'Profile', component: MemProfile }
     ]; 
   }

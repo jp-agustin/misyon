@@ -7,6 +7,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { AngularFireModule } from 'angularfire2';
 import { Geolocation } from '@ionic-native/geolocation';
 import { Network } from '@ionic-native/network';
+//import { NgCalendarModule  } from 'ionic2-calendar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -22,6 +23,9 @@ import { ChartMission } from '../pages/chart-mission/chart-mission';
 import { ChartPerson } from '../pages/chart-person/chart-person';
 import { MemProfile } from '../pages/mem-profile/mem-profile';
 import { HeadProfile } from '../pages/head-profile/head-profile';
+import { Profile } from '../pages/profile/profile';
+import { MemberList } from '../pages/member-list/member-list';
+//import { CalendarPage } from '../pages/calendar/calendar';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -51,9 +55,13 @@ export const firebaseConfig = {
     Create,
     Ongoing,
     MemProfile,
-    HeadProfile
+    HeadProfile,
+    Profile,
+    MemberList
+    //CalendarPage
   ],
   imports: [
+    //NgCalendarModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig)
@@ -73,7 +81,10 @@ export const firebaseConfig = {
     Create,
     Ongoing,
     MemProfile,
-    HeadProfile
+    HeadProfile,
+    Profile,
+    MemberList
+    //CalendarPage
   ],
   providers: [
     StatusBar,

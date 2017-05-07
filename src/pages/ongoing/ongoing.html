@@ -11,16 +11,19 @@
   <ion-card *ngFor="let mission of missions | async">
       <img src="assets/missions/{{mission.Image}}"/>
       <ion-card-content>
-        <ion-card-title>
+        <h1 style="color: #FFFFFF">
           {{mission.Location}}
-        </ion-card-title>
-        <h2 style="color: #90a4ae">
+        </h1>
+        <h3 style="color: #90a4ae">
           {{mission.Type}} | {{mission.Status}}
-        </h2>
+        </h3>
       </ion-card-content>
-      <button ion-item (click)="missionDetails(mission.MissionId);">
+
+      <ion-list>
+        <button ion-item (click)="missionDetails(mission.MissionId);" block>
           <ion-icon md="ios-arrow-forward-outline" item-right></ion-icon>
-          Details
-      </button>
-    </ion-card>
+          <p>Details</p>
+        </button>
+      </ion-list>
+  </ion-card>
 </ion-content>

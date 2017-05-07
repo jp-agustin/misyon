@@ -17,7 +17,7 @@ export class Current {
     this.missions = af.database.list('/Mission', {
       query: {
         orderByChild: 'HeadId',
-        equalTo: 1
+        equalTo: 21
       }
     });
   }
