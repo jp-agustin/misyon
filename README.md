@@ -30,6 +30,8 @@ Run the following command to add dependencies:
 
 8) Calendar view now working
 
+9) Organization list (without details page yet) added
+
 ---
 
 ### References
