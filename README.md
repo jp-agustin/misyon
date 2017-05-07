@@ -22,6 +22,12 @@ Run the following command to add dependencies:
 
 4) Basic info window (for markers) added + filtering markers function now working
 
+5) Different pages are now integrated (Lois' pages, Admin overview, Patrick's pages)
+
+6) Login, Splash Screen, and side menus are now included
+
+7) Edited UI
+
 ---
 
 ### References
