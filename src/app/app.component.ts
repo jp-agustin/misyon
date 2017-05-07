@@ -14,6 +14,7 @@ import { Ongoing } from '../pages/ongoing/ongoing';
 import { MemProfile } from '../pages/mem-profile/mem-profile';
 import { HeadProfile } from '../pages/head-profile/head-profile';
 import { CalendarPage } from '../pages/calendar/calendar';
+import { OrgList } from '../pages/org-list/org-list';
 
 @Component({
   selector: 'side-menu',
@@ -38,7 +39,7 @@ export class MyApp {
       { title: 'Admin', component: Tabs },
       { title: 'On-going', component: Ongoing },
       { title: 'Create Mission', component: Create },
-      { title: 'Organizations', component: HomePage },
+      { title: 'Organizations', component: OrgList },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
       { title: 'Calendar', component: CalendarPage }
@@ -47,7 +48,7 @@ export class MyApp {
     this.gheadPages = [
       { title: 'Home', component: HomePage },
       { title: 'Group Head', component: Current },
-      { title: 'Organizations', component: HomePage },
+      { title: 'Organizations', component: OrgList },
       { title: 'Map', component: Map },
       { title: 'List', component: MissionList },
       { title: 'Calendar', component: CalendarPage },

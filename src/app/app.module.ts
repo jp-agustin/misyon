@@ -26,6 +26,8 @@ import { HeadProfile } from '../pages/head-profile/head-profile';
 import { Profile } from '../pages/profile/profile';
 import { MemberList } from '../pages/member-list/member-list';
 import { CalendarPage } from '../pages/calendar/calendar';
+import { OrgList } from '../pages/org-list/org-list';
+import { OrgProfile } from '../pages/org-profile/org-profile';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -58,7 +60,9 @@ export const firebaseConfig = {
     HeadProfile,
     Profile,
     MemberList,
-    CalendarPage
+    CalendarPage,
+    OrgList,
+    OrgProfile
   ],
   imports: [
     NgCalendarModule,
@@ -84,7 +88,9 @@ export const firebaseConfig = {
     HeadProfile,
     Profile,
     MemberList,
-    CalendarPage
+    CalendarPage,
+    OrgList,
+    OrgProfile
   ],
   providers: [
     StatusBar,
