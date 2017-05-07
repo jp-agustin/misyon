@@ -11,10 +11,11 @@ import { Missiondetails } from '../missiondetails/missiondetails';
 export class CalendarPage {
 
   constructor(public navCtrl: NavController) {
-    this.loadMyEvents()
+    
   }
 
   ionViewDidLoad() {
+    this.loadEvents()
     console.log('ionViewDidLoad Calendar');
   }
     eventSource;
