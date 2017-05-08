@@ -2,7 +2,7 @@
 
 ### Commits
 
-'Note: Views are more acurate when run in an actual phone'
+`Note: Views are more acurate when run in an actual phone`
 
 1) Google maps can now be loaded. Current location of the user is also displayed using Geolocation plugin.
 
