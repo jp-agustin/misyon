@@ -22,13 +22,25 @@ Run the following command to add dependencies:
 
 4) Basic info window (for markers) added + filtering markers function now working
 
-5) Different pages are now integrated (Lois' pages, Admin overview, Patrick's pages)
+5) Different pages are now integrated (Lois' pages, Admin overview, Patrick's pages). For charts:
+
+```
+    npm install chart.js --save
+```
 
 6) Login, Splash Screen, and side menus are now included
 
 7) Edited UI
 
-8) Calendar view now working
+8) Calendar view now working: Run the following commands to include calendar:
+
+```
+    npm install typings --save
+
+    npm install intl@1.2.5 --save
+
+    npm install ionic2-calendar --save
+```
 
 9) Organization list (without details page yet) added
 
