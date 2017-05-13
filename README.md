@@ -46,6 +46,8 @@ Run the following command to add dependencies:
 
 9) Organization list (without details page yet) added
 
+10) Org Profile now added. Edited UI
+
 ---
 
 ### References
