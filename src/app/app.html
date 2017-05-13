@@ -9,6 +9,7 @@
         <!-- admin pages only -->
         <ion-list [hidden]="adminHide">
             <button menuClose ion-item *ngFor="let p of adminPages" (click)="openPage(p)" class="menuList">
+            <ion-icon item-left name="{{p.icon}}" color=isActive(p)></ion-icon>
             {{p.title}}
             </button>
         </ion-list>
@@ -35,6 +36,7 @@
         <!-- grouphead pages only -->
         <ion-list [hidden]="ghHide">
             <button menuClose ion-item *ngFor="let p of gheadPages" (click)="openPage(p)" class="menuList">
+            <ion-icon item-left name="{{p.icon}}" color=isActive(p)></ion-icon>
             {{p.title}}
             </button>
         </ion-list>
@@ -61,6 +63,7 @@
         <!-- volunteer pages only -->
         <ion-list [hidden]="volunHide">
             <button menuClose ion-item *ngFor="let p of volunPages" (click)="openPage(p)" class="menuList">
+            <ion-icon item-left name="{{p.icon}}" color=isActive(p)></ion-icon>
             {{p.title}}
             </button>
         </ion-list>

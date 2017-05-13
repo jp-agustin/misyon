@@ -1,10 +1,8 @@
 page-current {
-  
+    .detailbtn.activated{
+      color: #ffffff !important;
+    }
   ion-card-content {
-
-      background-color: map-get($colors, navbarColor);
-      text-align: center;
-      
       h1 {
         font-size: 2.5rem;
         margin-top: .5rem;
@@ -17,4 +15,56 @@ page-current {
 
     }
 
-}
+  .card-background-page {
+
+      ion-card {
+        position: relative;
+        text-align: center;
+      }
+
+      .container{
+        position: relative;
+      }
+
+      .mtitle{
+        // margin-bottom: 10px;
+        top: 50%;
+        bottom: 0px !important;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        width: 100%;
+        // overflow: auto;
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+
+      .card-title {
+        // margin-top: 10px;
+        padding-top: 10px;
+        // margin-bottom: 5px;
+        // height: 50%;
+        // padding-bottom: 100px;
+        // background-color: rgba(0,0,0,0.5);
+        position: relative;
+        // top: 65%;
+        // bottom: 35%;
+        font-size: 2.0em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .card-subtitle {
+        // background-color: rgba(0,0,0,0.5);
+        font-size: 1.0em;
+        position: relative;
+        // padding-top: 10px auto;
+        // bottom: 25%;
+        // top: 75%;
+        width: 100%;
+        color: #000fff;
+      }
+
+    }
+  }

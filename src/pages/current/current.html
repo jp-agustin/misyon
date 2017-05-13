@@ -7,20 +7,26 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="card-background-page">
   <ion-card *ngFor="let mission of missions | async">
+      <div class="container">
+      <div class="mtitle">
+        <div class="card-title">
+          <h1 style="color: #FFFFFF">
+            {{mission.Location}}
+          </h1>
+        </div>
+        <div class="card-subtitle">
+          <h3 style="color: #90a4ae">
+            {{mission.Type}} | {{mission.Status}}
+          </h3>
+        </div>
+      </div>
       <img src="assets/missions/{{mission.Image}}"/>
-      <ion-card-content>
-        <h1 style="color: #FFFFFF">
-          {{mission.Location}}
-        </h1>
-        <h3 style="color: #90a4ae">
-          {{mission.Type}} | {{mission.Status}}
-        </h3>
-      </ion-card-content>
+      </div>
 
       <ion-list>
-        <button ion-item (click)="missionDetails(mission.MissionId);" block>
+        <button class="detailbtn" ion-item (click)="missionDetails(mission.MissionId);" block>
           <ion-icon md="ios-arrow-forward-outline" item-right></ion-icon>
           <p>Details</p>
         </button>

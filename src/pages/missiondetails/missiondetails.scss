@@ -1,8 +1,23 @@
 page-missiondetails {
+      .container{
+        position: relative;
+      }
 
+      .mtitle{
+        // margin-bottom: 10px;
+        top: 50%;
+        bottom: 0px !important;
+        background-color: rgba(0,0,0,0.5);
+        position: absolute;
+        width: 100%;
+        // overflow: auto;
+        text-align: center;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
     ion-card-content {
 
-      background-color: map-get($colors, navbarColor);
+      // background-color: map-get($colors, navbarColor);
       text-align: center;
       padding-top: 28px;
       padding-bottom: 28px;

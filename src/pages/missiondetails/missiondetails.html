@@ -9,15 +9,20 @@
 <ion-content>
 
   <ion-card *ngFor="let mission of missions | async" >
-    <img src="assets/missions/{{mission.Image}}"/>  
-    <ion-card-content>
-      <h1 style="color: #FFFFFF"> 
-        {{mission.Location}}  
-      </h1>
-      <h3 style="color: #90a4ae"> 
-        {{mission.Type}} | {{mission.Status}} 
-      </h3>
-    </ion-card-content>
+    <div class="container">
+      <div class="mtitle">
+      <ion-card-content>
+        <h1 style="color: #FFFFFF"> 
+          {{mission.Location}}  
+        </h1>
+        <h3 style="color: #90a4ae"> 
+          {{mission.Type}} | {{mission.Status}} 
+        </h3>
+        <hr/>
+      </ion-card-content>
+      </div>
+    <img src="assets/missions/{{mission.Image}}"/> 
+    </div>
 
     <ion-list padding>
       <ion-item>
@@ -44,7 +49,7 @@
     </ion-list>
     
   </ion-card>
-  <div align="center">
+  <!-- <div align="center">
   <button ion-button class="button button-stable button-login" style="background-color: #37474f; height: 40px; width: 93%" block>  <p style="color: #FFFFFF">Join Mission</p>  </button>
-  </div>
+  </div> -->
 </ion-content>
