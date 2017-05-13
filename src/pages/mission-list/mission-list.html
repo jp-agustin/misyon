@@ -10,10 +10,32 @@
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <ion-label>Filters</ion-label>
+    <ion-select [(ngModel)]="type" (ionChange)="filterList();">
+      <ion-option value="all" ng-selected="selected">All Types</ion-option>
+      <ion-option value="general">General</ion-option>
+      <ion-option value="dental">Dental</ion-option>
+      <ion-option value="surgical">Surgical</ion-option>
+      <ion-option value="emergency">Emergency Relief</ion-option>
+    </ion-select>
+    <ion-select [(ngModel)]="status" (ionChange)="filterList();">
+      <ion-option value="all" ng-selected="selected">All Status</ion-option>
+      <ion-option value="past">Past</ion-option>
+      <ion-option value="ongoing">On-going</ion-option>
+      <ion-option value="upcoming">Upcoming</ion-option>
+    </ion-select>
+  </ion-item>
+
   <ion-list color="light">
     <button ion-item *ngFor="let mission of missions | async" (click)="goToMissionList(mission.MissionId)">
-    <ion-icon name="ios-medkit-outline" item-left></ion-icon>
-    <!-- <h1>Med mission #{{mission.MissionId}}</h1> -->
+    <!-- <ion-icon *ngIf="mission.Type == 'General'" name="ios-medkit-outline" item-left></ion-icon> -->
+    <ion-avatar item-left>
+      <img *ngIf="mission.Type == 'General'" src="assets/icon/pills.png"/>
+      <img *ngIf="mission.Type == 'Dental'" src="assets/icon/premolar.png"/>
+      <img *ngIf="mission.Type == 'Surgical'" src="assets/icon/syringe.png"/>
+      <img *ngIf="mission.Type == 'Emergency Relief'" src="assets/icon/ambulance.png"/>
+    </ion-avatar>
     <h2>{{mission.Location}}</h2>
     <p>{{mission.Type}} | {{mission.Status}}</p>
     </button>  

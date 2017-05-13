@@ -23,16 +23,15 @@ export class ChartPerson {
 
             type: 'horizontalBar',
             data: {
-                labels: ["Surgeon", "Dentist", "Orthodontist", "Nurse", "Priest", "Student", "Doctor"],
+                labels: ["Surgeon", "Dentist", "Orthodontist", "Nurse", "Student", "Doctor"],
                 datasets: [{
                     label: '# of Persons',
-                    data: [1, 3, 1, 3, 1, 12, 7],
+                    data: [2, 3, 1, 6, 12, 7],
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.7)',
                         'rgba(54, 162, 235, 0.7)',
                         'rgba(255, 206, 86, 0.7)',
                         'rgba(75, 192, 192, 0.7)',
-                        'rgba(153, 102, 255, 0.7)',
                         'rgba(255, 159, 64, 0.7)',
                         'rgba(120, 30, 50, 0.7)'
                     ],
@@ -41,7 +40,6 @@ export class ChartPerson {
                         'rgba(54, 162, 235, 1)',
                         'rgba(255, 206, 86, 1)',
                         'rgba(75, 192, 192, 1)',
-                        'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)',
                         'rgba(120, 30, 50, 1)'
                     ],

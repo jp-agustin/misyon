@@ -11,6 +11,8 @@ import { Missiondetails } from '../missiondetails/missiondetails';
 export class MissionList {
 
   missions: FirebaseListObservable<any>;
+  type: string = "all";
+  status: string = "all";
 
   constructor(public navCtrl: NavController, public navParams: NavParams, af: AngularFire) {
     this.missions = af.database.list('/Mission');
@@ -22,6 +24,10 @@ export class MissionList {
 
   goToMissionList(missionId){
     this.navCtrl.push(Missiondetails, missionId);
+  }
+
+  filterList(){
+
   }
 
 }
