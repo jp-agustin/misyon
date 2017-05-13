@@ -8,10 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <div style="clear:both; height:100px"></div>
-
   <ion-card *ngFor="let volunteer of volunteers | async">
-
+    <div style="clear:both; height:100px"></div>
+    
     <ion-card-content>
       <img src="assets/avatar/{{volunteer.Image}}"/>
       <h1 style="color: #FFFFFF">{{volunteer.FirstName}} {{volunteer.LastName}}</h1>

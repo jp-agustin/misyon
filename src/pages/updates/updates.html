@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-title>Updates</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let mission of missions | async">
+    <ion-card-content>
+      <h2 style="color: #FFFFFF">
+        {{mission.Location}}
+      </h2>
+      <h4 style="color: #90a4ae">
+        {{mission.Type}} | {{mission.Status}}
+      </h4>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngFor="let update of updates | async">
+    <ion-list padding>
+      <h3>{{update.Updates}}</h3>
+      <hr/>
+      <h6 style="color: #90a4ae">Posted by: John Patrick Agustin</h6>
+      <h6 style="color: #90a4ae">Date Posted: {{update.DatePosted}}</h6>
+    </ion-list>
+  </ion-card>
+
+  <ion-card *ngFor="let update of updates | async">
+    <ion-list padding>
+      <h3>Volunteer Doctors now in the location together with boxes of medical goods given by the partner organization. General check-ups are currently being done.</h3>
+      <hr/>
+      <h6 style="color: #90a4ae">Posted by: Lois Laput</h6>
+      <h6 style="color: #90a4ae">Date Posted: {{update.DatePosted}}</h6>
+    </ion-list>
+  </ion-card>
+
+  <ion-card *ngFor="let update of updates | async">
+    <ion-list padding>
+      <h3>The activity brought quality healthcare to the residents, with specialist services provided. In all, 2 304 residents were treated for various ailments, while another 34 underwent minor surgical procedures.</h3>
+      <hr/>
+      <h6 style="color: #90a4ae">Posted by: Gio Ishmael Evidente</h6>
+      <h6 style="color: #90a4ae">Date Posted: {{update.DatePosted}}</h6>
+    </ion-list>
+  </ion-card>
+</ion-content>

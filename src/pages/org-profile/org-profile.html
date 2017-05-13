@@ -4,6 +4,36 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
+  <ion-card *ngFor="let org of orgs | async" >
+    <div style="clear:both; height:100px"></div>
 
+    <ion-card-content>
+      <img src="assets/logo/{{org.Logo}}"/>  
+      <h1 style="color: #FFFFFF"> 
+        {{org.Name}}  
+      </h1>
+    </ion-card-content>
+
+    <ion-list padding>
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <p>Contact Person:</p>
+        <h3>{{org.ContactPerson}}</h3>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Contact Number:</p>
+        <h3>{{org.ContactNumber}}</h3>
+      </ion-item>
+
+      <hr/>
+
+      <br>
+      <h3>About</h3>
+      <br>
+      <p> {{org.Description}} </p>
+    </ion-list>
+    
+  </ion-card>
 </ion-content>

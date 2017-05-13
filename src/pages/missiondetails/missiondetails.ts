@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
 import { Profile } from '../profile/profile';
 import { MemberList } from '../member-list/member-list';
+import { Updates } from '../updates/updates';
 
 @IonicPage()
 @Component({
@@ -65,4 +66,9 @@ export class Missiondetails {
     this.navCtrl.push(MemberList, this.membersId);
     console.log("send memList: " + this.membersId);
   }
+
+  goToUpdates(missionId){
+    this.navCtrl.push(Updates, missionId);
+  }
 }
+

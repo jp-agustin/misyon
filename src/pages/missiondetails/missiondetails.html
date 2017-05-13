@@ -17,7 +17,6 @@
       <h3 style="color: #90a4ae"> 
         {{mission.Type}} | {{mission.Status}} 
       </h3>
-      <hr/>
     </ion-card-content>
 
     <ion-list padding>
@@ -41,8 +40,11 @@
       <br><hr/>
       
       <button ion-button style="background-color: #90a4ae" block (click)="goToMemberList()">  View Members  </button>
+      <button ion-button style="background-color: #90a4ae" block (click)="goToUpdates(mission.MissionId)">  View Updates  </button>
     </ion-list>
     
   </ion-card>
-  
+  <div align="center">
+  <button ion-button class="button button-stable button-login" style="background-color: #37474f; height: 40px; width: 93%" block>  <p style="color: #FFFFFF">Join Mission</p>  </button>
+  </div>
 </ion-content>
