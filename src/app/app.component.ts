@@ -15,6 +15,7 @@ import { MemProfile } from '../pages/mem-profile/mem-profile';
 import { HeadProfile } from '../pages/head-profile/head-profile';
 import { CalendarPage } from '../pages/calendar/calendar';
 import { OrgList } from '../pages/org-list/org-list';
+import { VolunteerHome } from '../pages/volunteer-home/volunteer-home';
 
 @Component({
   selector: 'side-menu',
@@ -25,43 +26,43 @@ export class MyApp {
 
   rootPage:any = LoginPage;
 
-  pages: Array<{title: string, component: any}>;
-  commonpages: Array<{title: string}>;
-  adminPages: Array<{title: string, component: any}>;
-  gheadPages: Array<{title: string, component: any}>;
-  volunPages: Array<{title: string, component: any}>;
+  pages: Array<{title: string, component: any, icon: string}>;
+  commonpages: Array<{title: string, icon: string}>;
+  adminPages: Array<{title: string, component: any, icon: string}>;
+  gheadPages: Array<{title: string, component: any, icon: string}>;
+  volunPages: Array<{title: string, component: any, icon: string}>;
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     this.adminPages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Admin', component: Tabs },
-      { title: 'On-going', component: Ongoing },
-      { title: 'Create Mission', component: Create },
-      { title: 'Organizations', component: OrgList },
-      { title: 'Map', component: Map },
-      { title: 'List', component: MissionList },
-      { title: 'Calendar', component: CalendarPage }
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Admin', component: Tabs, icon: 'person' },
+      { title: 'Ongoing', component: Ongoing, icon: 'refresh' },
+      { title: 'Create Mission', component: Create, icon: 'create' },
+      { title: 'Organizations', component: OrgList, icon: 'contacts' },
+      { title: 'Map', component: Map, icon: 'pin' },
+      { title: 'List', component: MissionList, icon: 'list-box' },
+      { title: 'Calendar', component: CalendarPage, icon: 'calendar' }
     ];
 
     this.gheadPages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Group Head', component: Current },
-      { title: 'Organizations', component: OrgList },
-      { title: 'Map', component: Map },
-      { title: 'List', component: MissionList },
-      { title: 'Calendar', component: CalendarPage },
-      { title: 'Profile', component: HeadProfile }
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Group Head', component: Current, icon: 'person' },
+      { title: 'Organizations', component: OrgList, icon: 'contacts' },
+      { title: 'Map', component: Map, icon: 'pin' },
+      { title: 'List', component: MissionList, icon: 'list-box' },
+      { title: 'Calendar', component: CalendarPage, icon: 'calendar' },
+      { title: 'Profile', component: HeadProfile, icon: 'contact' }
     ];
 
     this.volunPages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Volunteer', component: HomePage },
-      { title: 'Map', component: Map },
-      { title: 'List', component: MissionList },
-      { title: 'Calendar', component: CalendarPage },
-      { title: 'Profile', component: MemProfile }
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Volunteer', component: VolunteerHome, icon: 'person' },
+      { title: 'Map', component: Map, icon: 'pin' },
+      { title: 'List', component: MissionList, icon: 'clipboard' },
+      { title: 'Calendar', component: CalendarPage, icon: 'calendar' },
+      { title: 'Profile', component: MemProfile, icon: 'contact' }
     ]; 
   }
 

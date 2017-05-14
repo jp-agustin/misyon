@@ -29,6 +29,7 @@ import { CalendarPage } from '../pages/calendar/calendar';
 import { OrgList } from '../pages/org-list/org-list';
 import { OrgProfile } from '../pages/org-profile/org-profile';
 import { Updates } from '../pages/updates/updates';
+import { VolunteerHome } from '../pages/volunteer-home/volunteer-home';
 
 import { GoogleMaps } from '../providers/google-maps';
 import { Connectivity } from '../providers/connectivity';
@@ -64,7 +65,8 @@ export const firebaseConfig = {
     CalendarPage,
     OrgList,
     OrgProfile,
-    Updates
+    Updates,
+    VolunteerHome
   ],
   imports: [
     NgCalendarModule,
@@ -93,7 +95,8 @@ export const firebaseConfig = {
     CalendarPage,
     OrgList,
     OrgProfile,
-    Updates
+    Updates,
+    VolunteerHome
   ],
   providers: [
     StatusBar,

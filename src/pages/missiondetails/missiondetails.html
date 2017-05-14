@@ -24,14 +24,16 @@
     <img src="assets/missions/{{mission.Image}}"/> 
     </div>
 
-    <ion-list padding>
+    <ion-list padding *ngFor="let head of heads | async">
+      <button ion-button style="background-color: #90a4ae" block (click)="joinMission()"> <b> Join this Mission </b> </button>
+
       <ion-item>
         <ion-icon name="calendar" item-left></ion-icon>
         <p>Start Date: &nbsp;&nbsp; | &nbsp;&nbsp; End Date:</p>
         <h3>{{mission.StartDate}} &nbsp;&nbsp; | &nbsp;&nbsp; {{mission.EndDate}}</h3>
       </ion-item>
 
-      <button ion-item *ngFor="let head of heads | async" (click)="profile(head.MemberId);">
+      <button ion-item (click)="profile(head.MemberId);">
         <ion-avatar item-left>
           <img src="assets/avatar/{{head.Image}}"/>
         </ion-avatar>
@@ -49,7 +51,4 @@
     </ion-list>
     
   </ion-card>
-  <!-- <div align="center">
-  <button ion-button class="button button-stable button-login" style="background-color: #37474f; height: 40px; width: 93%" block>  <p style="color: #FFFFFF">Join Mission</p>  </button>
-  </div> -->
 </ion-content>

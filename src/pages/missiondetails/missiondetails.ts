@@ -70,5 +70,9 @@ export class Missiondetails {
   goToUpdates(missionId){
     this.navCtrl.push(Updates, missionId);
   }
+
+  joinMission(){
+    
+  }
 }
 

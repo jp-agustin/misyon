@@ -2,7 +2,9 @@ page-current {
     .detailbtn.activated{
       color: #ffffff !important;
     }
+
   ion-card-content {
+
       h1 {
         font-size: 2.5rem;
         margin-top: .5rem;
@@ -14,6 +16,14 @@ page-current {
       }
 
     }
+
+  ion-card {
+    
+    img {
+      max-height: 200px;
+    }
+
+  }
 
   .card-background-page {
 

@@ -1,8 +1,10 @@
-page-ongoing {
+page-volunteer-home {
     .detailbtn.activated{
       color: #ffffff !important;
     }
+
   ion-card-content {
+
       h1 {
         font-size: 2.5rem;
         margin-top: .5rem;
@@ -12,6 +14,7 @@ page-ongoing {
       h3 {
         font-size: 1.8rem;
       }
+
     }
 
   ion-card {
@@ -56,7 +59,7 @@ page-ongoing {
         position: relative;
         // top: 65%;
         // bottom: 35%;
-        font-size: 2.0em auto;
+        font-size: 2.0em;
         width: 100%;
         font-weight: bold;
         color: #fff;
@@ -67,8 +70,8 @@ page-ongoing {
         font-size: 1.0em;
         position: relative;
         // padding-top: 10px auto;
-        // bottom: 0px ;
-        // top: 30%;
+        // bottom: 25%;
+        // top: 75%;
         width: 100%;
         color: #000fff;
       }
