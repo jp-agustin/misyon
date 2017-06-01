@@ -1,57 +1,59 @@
-# Updates
+# Pre-requisites
 
-### Commits
+### Installation
 
-`Note: Views are more acurate when run in an actual phone`
+* First, to install needed packages for the Ionic applications, make sure to have node.js and npm installed. 
 
-1) Google maps can now be loaded. Current location of the user is also displayed using Geolocation plugin.
+* Before creating Ionic projects, you will need to install the Ionic CLI and Cordova.
+```
+        npm install -g ionic cordova
+```
 
-Run the following command to add dependencies:
+Once done, create the Misyon app base folder:
+```
+        ionic start Misyon blank
+```
+
+* For the database integration, install angularfire2 and firebase packages:
+
+```
+        npm install angularfire2 firebase --save
+```
+
+### Packages and Plugins
+
+` Note: When Adding new plugins or new libraries (npm install ...), make sure to import it to your files. Common files to check include but not limited to: *app.component.ts, app.module.ts, [nameOfThePage].ts`
+
+1) Run the following command to add Google maps dependencies:
 
 ```
     ionic plugin add cordova-plugin-geolocation
     npm install --save @ionic-native/geolocation	
 ```
 
-2) Added multiple markers using locations in the firebase database:
+2) For the network connectivity status, install the following plugin:
 
 ```
     ionic plugin add cordova-plugin-network-information
     npm install --save @ionic-native/network
 ```
 
-3) Current missions page for Head was added
-
-4) Basic info window (for markers) added + filtering markers function now working
-
-5) Different pages are now integrated (Lois' pages, Admin overview, Patrick's pages). For charts:
+3) For charts:
 
 ```
     npm install chart.js --save
 ```
 
-6) Login, Splash Screen, and side menus are now included
-
-7) Edited UI
-
-8) Calendar view now working: Run the following commands to include calendar:
+4) Run the following commands to include calendar:
 
 ```
     npm install typings --save
-
     npm install intl@1.2.5 --save
-
     npm install ionic2-calendar --save
 ```
 
-9) Organization list (without details page yet) added
-
-10) Org Profile now added. Edited UI
-
----
-
 ### References
 
-* [coe134-sampleapp](https://gitlab.com/agustin.johnpatrick/coe134-sampleapp/tree/firebase)
+* [Ionic documentation](https://ionicframework.com/docs/)
+* [Ionic tutorial](https://www.joshmorony.com/beginners-guide-to-getting-started-with-ionic-2/)
 * [Angularfire2 Docu](https://github.com/angular/angularfire2)
-* [Geolocation Plugin Docu](https://github.com/apache/cordova-plugin-geolocation)
