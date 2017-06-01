@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="clear:both; height:100px"></div>
+
+  <ion-card *ngFor="let member of members | async">
+
+    <ion-card-content>
+      <img src="assets/avatar/{{member.Image}}"/>
+      <h1 style="color: #FFFFFF">{{member.FirstName}} {{member.LastName}}</h1>
+      <h2 style="color: #FFFFFF">{{member.Profession}}</h2>
+    </ion-card-content>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Contact Number:</p>
+        <h3>{{member.ContactNum}}</h3>
+      </ion-item> 
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <p>Email Address:</p>
+        <h3>{{member.ContactEmail}}</h3>
+      </ion-item>
+
+      <ion-item><h2 style="color: #EF5350"> In case of emergency, contact: </h2></ion-item>
+    
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <p>Contact Person:</p>
+        <h3>{{member.EmerPerson}}</h3>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Emergency Contact Number:</p>
+        <h3>{{member.EmerNum}}</h3>
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
+</ion-content>

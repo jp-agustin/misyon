@@ -1,22 +1,60 @@
-# Instructions
+# Pre-requisites
 
+### Installation
 
-### Pre-requisites
+* First, to install needed packages for the Ionic applications, make sure to have node.js and npm installed. 
 
-* Create your own remote branch. Master branch initially contains the base Misyon files with Firebase integration. 
+* Before creating Ionic projects, you will need to install the Ionic CLI and Cordova.
 
-Refer to the _home.html_ and _home.ts_ in the [coe134-sampleapp](https://gitlab.com/agustin.johnpatrick/coe134-sampleapp/tree/firebase) as reference on how to access the database.
+```
+        npm install -g ionic cordova
+```
 
+Once done, create the Misyon app base folder:
+```
+        ionic start Misyon blank
+```
 
-### Notes
+* For the database integration, install angularfire2 and firebase packages:
 
-*To be updated*
+```
+        npm install angularfire2 firebase --save
+```
+
+### Packages and Plugins
+
+` Note: When Adding new plugins or new libraries (npm install ...), make sure to import it to your files. Common files to check include but not limited to: *app.component.ts, app.module.ts, [nameOfThePage].ts`
+
+1) Run the following command to add Google maps dependencies:
+
+```
+    ionic plugin add cordova-plugin-geolocation
+    npm install --save @ionic-native/geolocation	
+```
+
+2) For the network connectivity status, install the following plugin:
+
+```
+    ionic plugin add cordova-plugin-network-information
+    npm install --save @ionic-native/network
+```
+
+3) For charts:
+
+```
+    npm install chart.js --save
+```
+
+4) Run the following commands to include calendar:
+
+```
+    npm install typings --save
+    npm install intl@1.2.5 --save
+    npm install ionic2-calendar --save
+```
 
 ### References
 
-* [CoE 134 Misyon remarks](https://docs.google.com/document/d/1dJt55uQ8PeBNDJ-a7OhjwOiIMxE2M1j_ZEa5pLaNYBo/edit)
-* [Sample App](https://github.com/driftyco/ionic-conference-app)
-* [Ionic tutorial 1](https://www.joshmorony.com/build-a-todo-app-from-scratch-with-ionic-2-video-tutorial/)
-* [Ionic tutorial 2](https://www.youtube.com/playlist?list=PL0lNJEnwfVVMbFdOJlq-IzLhxMhKJB9Pe)
+* [Ionic documentation](https://ionicframework.com/docs/)
+* [Ionic tutorial](https://www.joshmorony.com/beginners-guide-to-getting-started-with-ionic-2/)
 * [Angularfire2 Docu](https://github.com/angular/angularfire2)
-* [Database Schema](https://docs.google.com/spreadsheets/d/1xJxCcu6D2GB4xU6TYo_BuxsIZIGruPue1VJInFu7aXc/edit#gid=657353095)

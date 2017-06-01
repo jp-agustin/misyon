@@ -1,0 +1,37 @@
+page-profile {
+
+  ion-card {
+
+    overflow: visible;
+
+    ion-card-content {
+
+      background-color: map-get($colors, navbarColor);
+      text-align: center;
+      padding-bottom: 28px;
+
+      img {
+        height: 160px;
+        width: 160px;
+        border-radius: 50%;
+        margin-top: -100px;
+        border: solid 4px #FFFFFF;
+        display: inline;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        margin-top: .5rem;
+        color: #FFFFFF;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        color: #FFFFFF;
+      }
+
+    }
+
+  } 
+
+}

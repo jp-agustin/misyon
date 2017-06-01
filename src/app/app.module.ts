@@ -5,9 +5,34 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { AngularFireModule } from 'angularfire2';
+import { Geolocation } from '@ionic-native/geolocation';
+import { Network } from '@ionic-native/network';
+import { NgCalendarModule  } from 'ionic2-calendar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Map } from '../pages/map/map';
+import { Current } from '../pages/current/current';
+import { LoginPage } from '../pages/login/login';
+import { Ongoing } from '../pages/ongoing/ongoing';
+import { Create } from '../pages/create/create';
+import { MissionList } from '../pages/mission-list/mission-list';
+import { Missiondetails } from '../pages/missiondetails/missiondetails';
+import { Tabs } from '../pages/tabs/tabs';
+import { ChartMission } from '../pages/chart-mission/chart-mission';
+import { ChartPerson } from '../pages/chart-person/chart-person';
+import { MemProfile } from '../pages/mem-profile/mem-profile';
+import { HeadProfile } from '../pages/head-profile/head-profile';
+import { Profile } from '../pages/profile/profile';
+import { MemberList } from '../pages/member-list/member-list';
+import { CalendarPage } from '../pages/calendar/calendar';
+import { OrgList } from '../pages/org-list/org-list';
+import { OrgProfile } from '../pages/org-profile/org-profile';
+import { Updates } from '../pages/updates/updates';
+import { VolunteerHome } from '../pages/volunteer-home/volunteer-home';
+
+import { GoogleMaps } from '../providers/google-maps';
+import { Connectivity } from '../providers/connectivity';
 
 // Firebase Configuration
 export const firebaseConfig = {
@@ -22,9 +47,29 @@ export const firebaseConfig = {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    Map,
+    Current,
+    LoginPage,
+    Missiondetails,
+    MissionList,
+    Tabs,
+    ChartPerson,
+    ChartMission,
+    Create,
+    Ongoing,
+    MemProfile,
+    HeadProfile,
+    Profile,
+    MemberList,
+    CalendarPage,
+    OrgList,
+    OrgProfile,
+    Updates,
+    VolunteerHome
   ],
   imports: [
+    NgCalendarModule,
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(firebaseConfig)
@@ -32,11 +77,34 @@ export const firebaseConfig = {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    Map,
+    Current,
+    LoginPage,
+    Missiondetails,
+    MissionList,
+    Tabs,
+    ChartPerson,
+    ChartMission,
+    Create,
+    Ongoing,
+    MemProfile,
+    HeadProfile,
+    Profile,
+    MemberList,
+    CalendarPage,
+    OrgList,
+    OrgProfile,
+    Updates,
+    VolunteerHome
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Geolocation,
+    Network,
+    GoogleMaps,
+    Connectivity,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

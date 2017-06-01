@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Organizations</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <button ion-item *ngFor="let org of orgs | async" (click)="goToOrgProfile(org.OrgId)">
+      <ion-avatar item-left><img src="assets/logo/{{org.Logo}}"/></ion-avatar>
+      <h3>{{org.Name}}</h3>
+    </button>  
+  </ion-list>
+</ion-content>

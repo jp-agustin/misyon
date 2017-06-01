@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Head Profile</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div style="clear:both; height:100px"></div>
+
+  <ion-card *ngFor="let head of heads | async">
+
+    <ion-card-content>
+      <img src="assets/avatar/{{head.Image}}"/>
+      <h1 style="color: #FFFFFF">{{head.FirstName}} {{head.LastName}}</h1>
+      <h2 style="color: #FFFFFF">{{head.Profession}}</h2>
+    </ion-card-content>
+
+    <ion-list>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Contact Number:</p>
+        <h3>{{head.ContactNum}}</h3>
+      </ion-item> 
+      <ion-item>
+        <ion-icon name="mail" item-left></ion-icon>
+        <p>Email Address:</p>
+        <h3>{{head.ContactEmail}}</h3>
+      </ion-item>
+
+      <ion-item><h2 style="color: #EF5350"> In case of emergency, contact: </h2></ion-item>
+    
+      <ion-item>
+        <ion-icon name="person" item-left></ion-icon>
+        <p>Contact Person:</p>
+        <h3>{{head.EmerPerson}}</h3>
+      </ion-item>
+      <ion-item>
+        <ion-icon name="call" item-left></ion-icon>
+        <p>Emergency Contact Number:</p>
+        <h3>{{head.EmerNum}}</h3>
+      </ion-item>
+    </ion-list>
+
+  </ion-card>
+</ion-content>

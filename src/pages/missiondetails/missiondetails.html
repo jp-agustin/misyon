@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar color="navbarColor">
+    <ion-title>
+      Mission Detail
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card *ngFor="let mission of missions | async" >
+    <div class="container">
+      <div class="mtitle">
+      <ion-card-content>
+        <h1 style="color: #FFFFFF"> 
+          {{mission.Location}}  
+        </h1>
+        <h3 style="color: #90a4ae"> 
+          {{mission.Type}} | {{mission.Status}} 
+        </h3>
+        <hr/>
+      </ion-card-content>
+      </div>
+    <img src="assets/missions/{{mission.Image}}"/> 
+    </div>
+
+    <ion-list padding *ngFor="let head of heads | async">
+      <button ion-button style="background-color: #90a4ae" block (click)="joinMission()"> <b> Join this Mission </b> </button>
+
+      <ion-item>
+        <ion-icon name="calendar" item-left></ion-icon>
+        <p>Start Date: &nbsp;&nbsp; | &nbsp;&nbsp; End Date:</p>
+        <h3>{{mission.StartDate}} &nbsp;&nbsp; | &nbsp;&nbsp; {{mission.EndDate}}</h3>
+      </ion-item>
+
+      <button ion-item (click)="profile(head.MemberId);">
+        <ion-avatar item-left>
+          <img src="assets/avatar/{{head.Image}}"/>
+        </ion-avatar>
+        <h2>{{head.FirstName}} {{head.LastName}}</h2>
+        <p>{{head.Profession}}</p>
+      </button>
+
+      <hr/><br>
+      <h3>Description</h3>
+      <p> {{mission.Description}} </p>
+      <br><hr/>
+      
+      <button ion-button style="background-color: #90a4ae" block (click)="goToMemberList()">  View Members  </button>
+      <button ion-button style="background-color: #90a4ae" block (click)="goToUpdates(mission.MissionId)">  View Updates  </button>
+    </ion-list>
+    
+  </ion-card>
+</ion-content>

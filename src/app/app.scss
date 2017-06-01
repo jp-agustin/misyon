@@ -1,3 +1,4 @@
+
 // http://ionicframework.com/docs/v2/theming/
 
 
@@ -14,3 +15,31 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+page-login{
+  .scroll-content {
+    background-color: #eceff1;//#cfd8dc;//#e2e2e2;
+  }
+}
+
+side-menu{
+  .sideMenu{
+    background-color: #cfd8dc;
+  }
+
+  .menuHeader{
+    padding-top: 80px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    width: 90%;
+  }
+
+  .menu-logo{
+    max-height: 180px;
+  }
+
+  .menuList{
+    background-color: #eceff1;
+    color: #2e2e2e;
+  }
+}
