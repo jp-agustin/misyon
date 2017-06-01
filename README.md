@@ -5,6 +5,7 @@
 * First, to install needed packages for the Ionic applications, make sure to have node.js and npm installed. 
 
 * Before creating Ionic projects, you will need to install the Ionic CLI and Cordova.
+
 ```
         npm install -g ionic cordova
 ```
