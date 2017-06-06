@@ -46,8 +46,44 @@
       <p> {{mission.Description}} </p>
       <br><hr/>
       
+      <ion-grid>
+        <ion-row style="height: 40px">
+          <ion-col col-12 style="text-align: center">Share to:</ion-col>
+        </ion-row>
+        <ion-row style="height: 40px">
+        <ion-col col-2>
+          <!-- <p>Share</p> -->
+          <button ion-button clear large>
+            <ion-icon name="logo-linkedin" style="color: #0077b5; height: 60px"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button clear large>
+            <ion-icon name="logo-facebook" style="color: #3b5998; height: 60px"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-2> 
+          <button ion-button clear large>
+            <ion-icon name="logo-twitter" style="color: #00aced; height: 60px"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button clear large>
+            <ion-icon name="logo-googleplus" style="color: #d34836; height: 60px"></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-2>
+          <button ion-button clear large>
+            <ion-icon name="logo-tumblr" style="color: #35465c; height: 60px"></ion-icon>
+          </button>
+        </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <hr/>
       <button ion-button style="background-color: #90a4ae" block (click)="goToMemberList()">  View Members  </button>
       <button ion-button style="background-color: #90a4ae" block (click)="goToUpdates(mission.MissionId)">  View Updates  </button>
+
     </ion-list>
     
   </ion-card>
